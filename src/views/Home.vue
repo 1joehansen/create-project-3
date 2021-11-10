@@ -1,37 +1,41 @@
 <template>
-<div>
-  <div class="wrapper">
-    <div class="search">
-      <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
-      </form>
-    </div>
+  <div class="home">
+    <img class='baseball' alt="Vue logo" src="../assets/baseball_logo.png" width="150px">
+
+    <HelloWorld msg="Select players for teams A and B"/>
   </div>
-  <ProductList :products="products" />
-</div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
+
 export default {
   name: 'Home',
   components: {
-    ProductList
-  },
-  data() {
-    return {
-      searchText: '',
-    }
-  },
-computed: {
-  products() {
-    return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText.toLowerCase()) >= 0);
+    HelloWorld
   }
-  },
 }
 </script>
 
+
 <style scoped>
+
+
+
+.baseball{
+  top: 20px;
+  position: relative;
+}
+
+.home{
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+  text-align: center;
+}
+
 .wrapper {
   display: flex;
   align-items: center;

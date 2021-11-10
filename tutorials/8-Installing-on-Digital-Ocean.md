@@ -149,7 +149,7 @@ When you are done with this command, the `dist` directory will contain all of th
 Now copy your the `dist` directory to `/var/www`. For example:
 
 ```
-cp -rp dist/* /var/www/motherearth.mydomain.com/
+cp -rp dist/* /var/www/motherearth.1joehansen.xyz/
 ```
 
 This is just like what you have done previously, when you wrote your own HTML, CSS, and JavaSript files, except this time these files are compiled from Vue files.

@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Browse from '../views/Browse.vue'
-import Cart from '../views/Cart.vue'
+import HeadToHead from '../views/HeadToHead.vue'
+import Featured from '../views/Featured.vue'
 
 Vue.use(VueRouter)
 
@@ -13,14 +13,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/browse',
-    name: 'Browse',
-    component: Browse
+    path: '/head-to-head',
+    name: 'HeadToHead',
+    component: HeadToHead
   },
   {
-    path: '/cart',
-    name: 'Cart',
-    component: Cart
+    path: '/featured-player',
+    name: 'Featured',
+    component: Featured
   },
 ]
 

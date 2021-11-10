@@ -1,28 +1,12 @@
 <template>
-<div id="app">
-  <div id="menu">
-    <div id="brand">
-      <router-link to="/">
-        <img src="/images/logo.png">
-      </router-link>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Roster Selection</router-link> |
+      <router-link to="/head-to-head">Head to Head</router-link> |
+      <router-link to="/featured-player">Featured Player</router-link>
     </div>
-    <div id="side">
-      <router-link to="/browse">
-        <div class="menu-item browse">
-          <img src="/images/globe.png">
-          <p>Browse</p>
-        </div>
-      </router-link>
-      <router-link to="/cart">
-        <div class="menu-item">
-          <img src="/images/love.png">
-          <p>{{b}} items</p>
-        </div>
-      </router-link>
-    </div>
+    <router-view/>
   </div>
-  <router-view />
-</div>
 </template>
 
 <script>
@@ -33,7 +17,7 @@ export default {
   },
   computed: {
     b: function () {
-      return this.$root.$data.cart.length;
+      return 5;
     }
   }
 }
@@ -47,19 +31,24 @@ export default {
 
 body {
   margin: 50px 100px;
-
 }
 
-#menu {
-  display: grid;
+
+#app {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5px;
   grid-template-areas: "none brand side";
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
 }
 
-#menu a {
-  color: #B84901;
+#app a {
+  color: #b32222;
 }
 
 #brand {

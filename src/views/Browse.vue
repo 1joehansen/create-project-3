@@ -8,16 +8,16 @@
       <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
     </ul>
   </div>
-  <ProductList :products="products" />
+  <PlayerList :products="products" />
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import PlayerList from "../components/PlayerList.vue"
 export default {
   name: 'Browse',
   components: {
-    ProductList
+    PlayerList
   },
   data() {
     return {
